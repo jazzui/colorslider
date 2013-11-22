@@ -1,0 +1,59 @@
+<!doctype html5>
+<html>
+    <head>
+        <title>Hi</title>
+        <style>
+            body {
+                padding: 200px;
+            }
+            .box {
+                width: 30px;
+                height: 20px;
+                background-color: green;
+                border-radius: 10px;
+                padding: 20px;
+            }
+            #thing2 {
+                background-color: red;
+            }
+        </style>
+        <link rel="stylesheet" href="../build/build.css">
+        <script src="../build/build.js"></script>
+    </head>
+    <body>
+
+        <div class="box" id="thing"></div>
+        <button>Hello!</button>
+        <div class="box" id="thing2"></div>
+        <script>
+            var S = require('colorslider')
+            var s = new S
+            s.on('change', function (val) {
+              thing.innerHTML = val
+	      thing.style.backgroundColor = val
+            })
+            var thing = document.querySelector('#thing')
+              , showing = false
+            thing.addEventListener('click', function () {
+              if (!showing)
+                s.show(thing)
+              else
+                s.hide()
+              showing = !showing
+            })
+            document.querySelector('button').addEventListener('click', function () {
+              s.set('#00FF00')
+            })
+            
+	    /*
+            var s2 = new S({value: 30, min: 0, max: 100})
+            s2.on('change', function (val) {
+              thing2.innerHTML = val
+            })
+            var thing = q('#thing')
+            s2.show(thing2)
+	    */
+        </script>
+    </body>
+</html>
+

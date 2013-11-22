@@ -1,0 +1,24 @@
+{
+  "name": "colorslider",
+  "repo": "jazzui/colorslider",
+  "description": "A colorpicker tooltip component",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/aurora-tip": "*",
+    "component/color-picker": "*",
+    "component/tip": "*",
+    "lodash/lodash": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "template.js"
+  ],
+  "styles": [
+    "index.css"
+  ],
+  "remotes": []
+}
