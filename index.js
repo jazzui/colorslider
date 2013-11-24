@@ -12,8 +12,8 @@ function Slider(opts) {
   this.message('')
   this.colorpicker = new ColorPicker()
   var self = this
-  this.colorpicker.on('change', function () {
-    self.emit('change', self.colorpicker.color())
+  this.colorpicker.on('change', function (color) {
+    self.emit('change', color)
   })
   this.inner.appendChild(this.colorpicker.el[0])
 }
