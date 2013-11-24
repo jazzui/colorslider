@@ -16,6 +16,9 @@
             #thing2 {
                 background-color: red;
             }
+            button {
+                float: right;
+            }
         </style>
         <link rel="stylesheet" href="../build/build.css">
         <script src="../build/build.js"></script>
@@ -23,13 +26,13 @@
     <body>
 
         <div class="box" id="thing"></div>
-        <button>Hello!</button>
         <div class="box" id="thing2"></div>
+        <button>Hello!</button>
         <script>
             var S = require('colorslider')
             var s = new S
             s.on('change', function (val) {
-              thing.innerHTML = val
+              thing.innerHTML = val.rgba().toHex()
 	      thing.style.backgroundColor = val
             })
             var thing = document.querySelector('#thing')
@@ -42,7 +45,7 @@
               showing = !showing
             })
             document.querySelector('button').addEventListener('click', function () {
-              s.set('#00FF00')
+              s.set('#aaFF007f')
             })
             
 	    /*

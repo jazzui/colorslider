@@ -6,7 +6,7 @@
   "keywords": [],
   "dependencies": {
     "component/aurora-tip": "*",
-    "component/color-picker": "*",
+    "jazzui/color-picker": "*",
     "component/tip": "*",
     "lodash/lodash": "*"
   },
